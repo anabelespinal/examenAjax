@@ -24,7 +24,7 @@ function buildResults(searchKeyword,searchLocation,limit,resultsnum,pageNumber,f
 	var initialSearch = first;
 	var center = home;
 
-	var queryURL = "//api.indeed.com/ads/apisearch?publisher=8023780673544955&format=json"+searchKey+searchLoc+lim+resultsNumber+"&v=2";
+	var queryURL = "https://api.indeed.com/ads/apisearch?publisher=8023780673544955&format=json"+searchKey+searchLoc+lim+resultsNumber+"&v=2";
 
 	$.ajax({
 		url: queryURL,
