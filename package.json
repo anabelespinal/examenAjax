@@ -1,0 +1,18 @@
+{
+  "name": "examen-final",
+  "version": "1.0.0",
+  "description": "examen de ajax- json-",
+  "main": "server.js",
+  "scripts": {
+    "test": "examen",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "examen-final"
+  ],
+  "author": "anabel espinal cruz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
