@@ -14,23 +14,6 @@ function initialSearch(keywords, home) {
 	buildResults(searchKeyword,searchLocation,limit,resultsnum,pageNumber,first,home);
 }
 
-function getCenter(home) {
-	var centerLocation = home;
-
-	var requestURL = 'https://maps.googleapis.com/maps/api/geocode/json?address='+centerLocation+'&key=AIzaSyBOo3mntkfMMomnO0V0P6Mt4bQ3vMUUWIw';
-
-	$.ajax({
-		url: requestURL,
-		method: 'GET',
-	})
-	.done(function(response) {
-		var results = response.results[0].geometry.location;
-		var centerLat = results.lat;
-		var centerLong = results.lng;
-
-	});
-}
-
 function buildResults(searchKeyword,searchLocation,limit,resultsnum,pageNumber,first,home){
 
 	var searchKey =searchKeyword;
@@ -41,9 +24,7 @@ function buildResults(searchKeyword,searchLocation,limit,resultsnum,pageNumber,f
 	var initialSearch = first;
 	var center = home;
 
-	getCenter(center);
-
-	var queryURL = "http://api.indeed.com/ads/apisearch?publisher=8023780673544955&format=json"+searchKey+searchLoc+lim+resultsNumber+"&v=2";
+	var queryURL = "//api.indeed.com/ads/apisearch?publisher=8023780673544955&format=json"+searchKey+searchLoc+lim+resultsNumber+"&v=2";
 
 	$.ajax({
 		url: queryURL,
